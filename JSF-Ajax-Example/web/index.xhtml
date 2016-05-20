@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:inputText >
+                <f:ajax event="click" listener="#{userController.ajaxClick()}"/>
+                <f:ajax event="change" listener="#{userController.ajaxChange()}"/>
+                <f:ajax event="blur" listener="#{userController.ajaxBlur()}"/>
+                <f:ajax event="dblclick" listener="#{userController.ajaxDoubleClick()}"/>
+                <f:ajax event="focus" listener="#{userController.ajaxFocus()}"/>
+                <f:ajax event="keydown" listener="#{userController.ajaxkeyDown()}"/>
+                <f:ajax event="keypress" listener="#{userController.ajaxkeypress()}"/>
+                <f:ajax event="keyup" listener="#{userController.ajaxkeyup()}"/>
+                <f:ajax event="mousedown" listener="#{userController.ajaxMouseDown()}"/>
+                <f:ajax event="mousemove" listener="#{userController.ajaxMouseMove()}"/>
+                <f:ajax event="mouseout" listener="#{userController.ajaxMouseOut()}"/>
+                <f:ajax event="mouseover" listener="#{userController.ajaxMouseOver()}"/>
+                <f:ajax event="mouseup" listener="#{userController.ajaxMouseUp()}"/>
+                <f:ajax event="select" listener="#{userController.ajaxSelect()}"/>
+                
+            </h:inputText>
+        </h:form>
+    </h:body>
+</html>
+
