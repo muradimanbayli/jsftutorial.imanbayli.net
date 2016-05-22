@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <script>
+            function ajaxOnevent(data){
+                var status=data.status;
+                if("begin"==status){
+                    document.getElementById("loading-screen").style.display="block";
+                    document.getElementById("result-screen").style.display="none";
+                }else if ("success"==status){
+                    document.getElementById("loading-screen").style.display="none";
+                    document.getElementById("result-screen").style.display="block";
+                }
+            }
+            function onError(){
+                alert('Error');
+            }
+        </script> 
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:commandButton value="send" action="#{userController.sendAction()}">
+                <f:ajax onevent="ajaxOnevent" onerror="onError" render="output"/>
+            </h:commandButton>
+            <div id="loading-screen" style="display: none">
+                <img src="ajax-loader-gif-image-216.gif"/>
+            </div>
+            <div id="result-screen">
+                <h:outputText id="output" value="#{userController.resultText}"/>
+            </div>
+        </h:form>
+    </h:body>
+</html>
+
