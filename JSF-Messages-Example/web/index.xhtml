@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+            ul {
+                list-style-type: none;
+                padding: 0px;
+                margin: 0px;
+            }
+            ul li{
+                padding: 0px;
+                margin: 0px;
+            }
+            .error{
+                background-color: #ff9999;
+                color: #ff0033;
+                border:1px solid #ff0033;
+            }
+            .fatal{
+                background-color: #ff0033;
+                color: #cc0033;
+                border:1px solid #cc0033;
+            }
+            .info{
+                background-color: #99ffff;
+                color: #00ccff;
+                border:1px solid #00ccff;
+            }
+            .warning{
+                background-color: #ffcc66;
+                color: #ff6600;
+                border:1px solid #ff6600;    
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:inputText value="#{userController.input}"/>
+            <h:commandButton value="Do Something" action="#{userController.doSomeThing()}"/>
+            <h:messages errorClass="error" fatalClass="fatal"  infoClass="info" warnClass="warning"/>
+        </h:form>
+    </h:body>
+</html>
+
