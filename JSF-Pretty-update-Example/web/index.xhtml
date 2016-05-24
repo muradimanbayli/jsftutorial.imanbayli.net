@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+            *{
+                font-family: Tahoma;
+            }
+            #panel{
+                border: 1px solid #DDD;
+                width: 450px;
+                font-size: 28px;
+                margin: 50px auto;
+                padding: 10px;
+                text-align: center;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div id="panel">
+                Full Name :
+                <h:outputLabel value="#{userController.fullName}" rendered="#{ not userController.editAble}">
+                    <f:ajax event="dblclick" listener="#{userController.update()}" render="@form"/>
+                </h:outputLabel> 
+                    
+                
+                <h:inputText style="font-size: 28px;border: 1px solid #DDD" value="#{userController.fullName}" rendered="#{userController.editAble}">
+                    <f:ajax event="blur" listener="#{userController.save()}" render="@form" execute="@form"/>
+                </h:inputText> 
+                    
+            </div>     
+        </h:form>
+            
+    </h:body>
+</html>
+
