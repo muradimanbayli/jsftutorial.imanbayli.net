@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+            :focus{outline: none;}
+            #pick-list-panel select{
+                border: 1px solid #DDD;
+                min-height: 300px;
+                overflow: visible;
+                width: 200px;
+            }
+            #pick-list-panel select option{
+                padding: 5px 10px 5px 10px;
+                width: 200px;
+            }
+            #pick-list-panel{
+                width: 650px;
+                margin: 100px auto;
+            }
+            #pick-list-left{
+                float: left;
+                width: 230px;
+            }
+            #pick-list-main{
+                float: left;
+                width: 50px;
+                padding-top: 70px;
+            }
+            #pick-list-right{
+                float: left;
+                width: 230px;
+            }
+            #pick-list-main input[type='submit']{
+                margin-bottom: 3px;
+                cursor: pointer;
+                width: 30px;
+                border: 1px solid #DDD;
+                padding: 3px 6px 3px 6px;
+                background-color: #e6e6e6;
+                border-right: 5px;
+            }
+        </style> 
+    </h:head>
+    <h:body>
+        <h:form>
+            <div id="pick-list-panel">
+                <div id="pick-list-left">
+                    <h:selectOneListbox value="#{pickListController.leftValue}">
+                        <f:selectItems value="#{pickListController.leftItems}"/>
+                        <f:passThroughAttribute name="size" value="3"/>
+                    </h:selectOneListbox>
+                </div>
+                <div id="pick-list-main">
+                    <h:commandButton value="&gt;" action="#{pickListController.pushToLeftSelected()}">
+                        <f:ajax execute="@form" render="@form"/>
+                    </h:commandButton>
+                    <h:commandButton value="&gt;&gt;" action="#{pickListController.pushToLeftAll()}">
+                        <f:ajax execute="@form" render="@form"/>
+                    </h:commandButton>
+                    <h:commandButton value="&lt;" action="#{pickListController.pushToRightSelected()}">
+                        <f:ajax execute="@form" render="@form"/>
+                    </h:commandButton>
+                    <h:commandButton value="&lt;&lt;" action="#{pickListController.pushToRightAll()}">
+                        <f:ajax execute="@form" render="@form"/>
+                    </h:commandButton>
+                        
+                        
+                </div>
+                <div id="pick-list-right" >
+                    <h:selectOneListbox value="#{pickListController.rightValue}">
+                        <f:selectItems value="#{pickListController.rightItems}"/>
+                        <f:passThroughAttribute name="size" value="3"/>
+                    </h:selectOneListbox>
+                </div>
+            </div>
+        </h:form>    
+    </h:body>
+</html>
+
