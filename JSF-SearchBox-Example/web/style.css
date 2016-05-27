@@ -1,0 +1,43 @@
+/*
+style.css
+Created by Murad R. Imanbayli <muradimanbayli at gmail.com> on May 27, 2016  12:08:27 PM
+Copyright www.imanbayli.net 2016.All rights reserved
+*/
+/* 
+    Created on : May 27, 2016, 12:08:27 PM
+    Author     : Murad R. Imanbayli <muradimanbayli at gmail.com>
+*/
+
+*{
+    font-family: serif;
+}
+#search-panel{
+    border: 1px solid #DDD;
+    width: 600px;
+    margin: 50px auto;
+    padding: 10px;
+}
+#search-panel input[type='text']{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #DDD;
+    outline: none;
+    font-size: 18px;
+    font-family: fantasy;
+}
+#search-panel ul{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+#search-panel ul  li{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    font-family: serif;
+}
+#search-panel ul  li:hover{
+    background-color: #f3f3f3;
+}
+
