@@ -10,6 +10,7 @@
         <h:form>
             <h:inputText value="#{userController.username}" label="name">
                 <f:validator validatorId="net.imanbayli.jsftutorial.validator.EmptyFieldValidate"/>
+               
             </h:inputText>
             <h:commandButton value="Send" action="#{userController.sayUsername()}"/><br/>
             <h:outputText value="#{userController.output}"/>
