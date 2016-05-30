@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script src="script.js" type="text/javascript"></script>
+    </h:head>
+    <h:body>
+        <div id="accordion-panel">
+            <ul>
+                <ui:repeat var="a" value="#{accordionController.elements}">
+                <li>
+                    <h5 onclick="onSelectTab(this);"><span class="icon">+</span>#{a.title}</h5>
+                    <p>#{a.body}</p>
+                </li>
+                </ui:repeat>
+            </ul>
+            
+        </div>
+    </h:body>
+</html>
+

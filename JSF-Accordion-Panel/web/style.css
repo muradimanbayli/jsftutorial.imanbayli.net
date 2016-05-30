@@ -1,0 +1,48 @@
+/*
+style.css
+Created by Murad R. Imanbayli <muradimanbayli at gmail.com> on May 30, 2016  2:19:46 PM
+Copyright www.imanbayli.net 2016.All rights reserved
+*/
+/* 
+    Created on : May 30, 2016, 2:19:46 PM
+    Author     : Murad R. Imanbayli <muradimanbayli at gmail.com>
+*/
+div#accordion-panel{
+    width: 600px;
+    margin: 50px auto;
+}
+ul,li,h5,p{
+    padding: 0px;
+    margin: 0px;
+}
+div#accordion-panel ul{
+    list-style-type: none;
+}
+div#accordion-panel h5{
+    border: 1px solid #cccccc;
+    background-color: #DDD;
+    padding: 10px;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+div#accordion-panel p{
+    min-height: 100px;
+    border: 1px solid #DDD;
+    border-top: none;
+    display: none;
+    padding: 5px;
+}
+div#accordion-panel h5.selected-panel{
+    background-color: white;
+    color: #686868;
+}
+div#accordion-panel h5.selected-panel span.icon{
+    border: 1px solid #686868;
+} 
+div#accordion-panel span.icon{
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 10px;
+    padding: 2px 5px 2px 5px;;
+}
