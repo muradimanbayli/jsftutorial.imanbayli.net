@@ -1,0 +1,31 @@
+/*
+style.css
+Created by Murad R. Imanbayli <muradimanbayli at gmail.com> on May 30, 2016  11:16:32 PM
+Copyright www.imanbayli.net 2016.All rights reserved
+*/
+/* 
+    Created on : May 30, 2016, 11:16:32 PM
+    Author     : Murad R. Imanbayli <muradimanbayli at gmail.com>
+*/
+
+h5,p,ul,li{
+    padding: 0px;
+    margin: 0px;
+}
+ul{
+    list-style-type: none;
+}
+div#data-scroller-panel{
+    width: 400px;
+    border: 1px solid #DDD;
+    margin: 50px auto;
+    padding: 5px;
+}
+div#data-scroller-panel{
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+div#data-scroller-panel ul li {
+    border-bottom: 1px solid #DDD;
+}
