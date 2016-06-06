@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h1>User Experience</h1>
+            <hr/>
+            <table>
+                <tr>
+                    <td>Company</td>
+                    <td>Position</td>
+                    <td></td>
+                </tr>
+                <ui:repeat value="#{userController.experienceGroup}" var="e">
+                    <tr>
+                        <td>
+                            <h:inputText value="#{e.company}"/>
+                        </td>
+                        <td>
+                            <h:selectOneMenu value="#{e.position}">
+                                <f:selectItem itemLabel="Front-End Developer" itemValue="Front-End Developer"/>
+                                <f:selectItem itemLabel="Back-End Developer" itemValue="Back-End Developer"/>
+                                <f:selectItem itemLabel="Full-Stack Developer" itemValue="Full-Stack Developer"/>
+                            </h:selectOneMenu>
+                        </td>
+                        <td>
+                            <h:commandButton value="Remove" action="#{userController.remove(e)}">
+                                <f:ajax render="@form" execute="@form"/>
+                            </h:commandButton>
+                        </td>
+                    </tr>
+                </ui:repeat>    
+                <tr>
+                    <td colspan="3">
+                        <h:commandButton value="Add" action="#{userController.add()}">
+                            <f:ajax render="@form" execute="@form"/>
+                        </h:commandButton> 
+                         <h:commandButton value="Save" action="#{userController.save()}">
+                            
+                        </h:commandButton> 
+                    </td>
+                </tr> 
+
+            </table>
+        </h:form>
+    </h:body>
+</html>
+
