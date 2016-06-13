@@ -1,0 +1,24 @@
+/*
+style.css
+Created by Murad R. Imanbayli <muradimanbayli at gmail.com> on Jun 13, 2016  11:08:12 PM
+Copyright www.imanbayli.net 2016.All rights reserved
+*/
+/* 
+    Created on : Jun 13, 2016, 11:08:12 PM
+    Author     : Murad R. Imanbayli <muradimanbayli at gmail.com>
+*/
+*{
+    font-family: "Tahoma"
+}
+#progress-container{
+    background-color: #e3e3e3;
+}
+#progress{
+    background-color: #0099ff;
+    color: white;
+    width: 0%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
