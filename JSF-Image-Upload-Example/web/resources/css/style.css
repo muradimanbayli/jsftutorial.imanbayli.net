@@ -1,0 +1,26 @@
+/*
+style.css
+Created by Murad R. Imanbayli <muradimanbayli at gmail.com> on Jun 15, 2016  5:50:23 PM
+Copyright www.imanbayli.net 2016.All rights reserved
+*/
+/* 
+    Created on : Jun 15, 2016, 5:50:23 PM
+    Author     : Murad R. Imanbayli <muradimanbayli at gmail.com>
+*/
+#upload-button{
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background: url('../image/upload.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#upload-button input[type='file']{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+#upload-button:active{
+    width: 102px;
+    height: 102px;
+}
