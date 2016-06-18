@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Tab Panel Example</title>
+        <style>
+            input[type='submit'].tab{
+                padding: 5px;
+                margin: 0px;
+                margin-right: 3px;
+                background-color: black;
+                color: white;
+                border:none;
+                width: 100px;
+                height: 30px;
+                border-radius: 5px 5px 0px 0px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            input[type='submit'].tab.active{
+                background-color: white;
+                color: black;
+                font-weight: bold;
+            }
+            body{
+                background-color: #d5d5d5;
+            }
+            #tab-content{
+                background-color: white;
+                padding: 10px;
+                border-radius: 3px;
+            }
+
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div id="tab-wrapper">
+                <div id="tab-title">
+                    <ui:repeat value="#{tabController.tabs}" var="t">
+                        <h:commandButton class="tab #{tabController.selectedtab.title==t.title ? 'active':''}" value="#{t.title}" action="#{tabController.doSelect(t)}">
+                            <f:ajax execute="@form" render="@form"/>
+                        </h:commandButton>
+                    </ui:repeat>
+                </div>
+                <div id="tab-content">
+                    <h:outputText value="#{tabController.selectedtab.content}" escape="false"/>
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>
+
