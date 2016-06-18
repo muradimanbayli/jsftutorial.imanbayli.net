@@ -1,0 +1,35 @@
+/*
+tab.css
+Created by Murad R. Imanbayli <muradimanbayli at gmail.com> on Jun 18, 2016  4:25:21 PM
+Copyright www.imanbayli.net 2016.All rights reserved
+*/
+/* 
+    Created on : Jun 18, 2016, 4:25:21 PM
+    Author     : Murad R. Imanbayli <muradimanbayli at gmail.com>
+*/
+input[type='submit'].tab{
+    padding: 5px;
+    margin: 0px;
+    margin-right: 3px;
+    background-color: black;
+    color: white;
+    border:none;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px 5px 0px 0px;
+    font-size: 16px;
+    cursor: pointer;
+}
+input[type='submit'].tab.active{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+body{
+    background-color: #d5d5d5;
+}
+#tab-content{
+    background-color: white;
+    padding: 10px;
+    border-radius: 3px;
+}
