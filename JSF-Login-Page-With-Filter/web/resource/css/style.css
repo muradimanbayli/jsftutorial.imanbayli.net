@@ -1,0 +1,43 @@
+/*
+style.css
+Created by Murad R. Imanbayli <muradimanbayli at gmail.com> on Jul 2, 2016  5:16:34 PM
+Copyright www.imanbayli.net 2016.All rights reserved
+*/
+/* 
+    Created on : Jul 2, 2016, 5:16:34 PM
+    Author     : Murad R. Imanbayli <muradimanbayli at gmail.com>
+*/
+*{
+    font-family: "Tahoma";
+}
+#login-panel{
+    width: 400px;
+    margin: 50px auto;
+}
+#login-panel table{
+    border: 1px solid #DDD;
+    padding: 50px;
+    border-radius: 3px;
+}
+:focus{
+    outline: none;
+}
+#login-panel input[type='text'],#login-panel input[type='password']{
+    border: 1px solid #DDD;
+    padding: 3px;
+    border-radius: 3px;
+}
+#login-panel input[type='submit']{
+    border: 1px solid #DDD;
+    width: 100%;
+    padding: 5px;
+    background-color: white;
+    border-radius: 3px;
+    font-size: 15px;
+    color: white;
+    background-color: activeborder;
+    cursor: pointer;
+}
+#login-panel input[type='submit']:active{
+    background-color: #ececec;
+}

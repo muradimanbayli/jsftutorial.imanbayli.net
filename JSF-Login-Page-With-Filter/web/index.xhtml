@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Welcome</title>
+        <link rel="stylesheet" type="text/css" href="resource/css/style.css"/>
+    </h:head>
+    <h:body>
+        <div id="login-panel">
+            <h:form>
+                <table>
+                    <tr>
+                        <td>Username :</td>
+                        <td>
+                            <h:inputText value="#{loginController.username}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password :</td>
+                        <td>
+                            <h:inputSecret value="#{loginController.password}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <h:commandButton value="Log in" action="#{loginController.login()}"/>
+                        </td>
+                    </tr>
+                </table>
+            </h:form>
+        </div>
+    </h:body>
+</html>
+
