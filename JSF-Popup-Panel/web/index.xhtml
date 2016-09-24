@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div style="background-color: cornflowerblue;">
+                Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum
+                <h:commandButton value="show details" action="#{popupController.show()}">
+                    <f:ajax render="@form"/>
+                </h:commandButton>
+            </div>
+            <div style="background-color: darkmagenta">
+                Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum
+                <h:commandButton value="show details" action="#{popupController.show()}">
+                    <f:ajax render="@form"/>
+                </h:commandButton>
+            </div>
+            <div style="background-color: cornflowerblue;">
+                Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum
+                <h:commandButton value="show details" action="#{popupController.show()}">
+                    <f:ajax render="@form"/>
+                </h:commandButton>
+            </div>
+            <div style="background-color: darkmagenta">
+                Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum
+                <h:commandButton value="show details" action="#{popupController.show()}">
+                    <f:ajax render="@form"/>
+                </h:commandButton>
+            </div>
+            <div style="background-color: cornflowerblue;">
+                Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum
+                <h:commandButton value="show details" action="#{popupController.show()}">
+                    <f:ajax render="@form"/>
+                </h:commandButton>
+            </div>
+            <div style="background-color: darkmagenta">
+                Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum
+                <h:commandButton value="show details" action="#{popupController.show()}">
+                    <f:ajax render="@form"/>
+                </h:commandButton>
+            </div>
+            <div style="background-color: cornflowerblue;">
+                Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum
+                <h:commandButton value="show details" action="#{popupController.show()}">
+                    <f:ajax render="@form"/>
+                </h:commandButton>
+            </div>
+            <div style="background-color: darkmagenta">
+                Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum Lorem opsum
+                <h:commandButton value="show details" action="#{popupController.show()}">
+                    <f:ajax render="@form"/>
+                </h:commandButton>
+            </div>
+
+            <h:panelGroup layout="block" styleClass="popup-panel-overlay" rendered="#{popupController.showPopup}">
+                <div class="popup-panel">
+                    This is popup panel<br/>
+                    This is popup panel<br/>
+                    This is popup panel<br/>
+                    This is popup panel<br/>
+                    This is popup panel<br/>
+                    <h:commandButton value="hide details" action="#{popupController.hide()}">
+                        <f:ajax render="@form"/>
+                    </h:commandButton>
+                </div>
+            </h:panelGroup>
+        </h:form>
+    </h:body>
+</html>
+
