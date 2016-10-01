@@ -1,0 +1,45 @@
+/*
+style.css
+Created by Murad R. Imanbayli <muradimanbayli at gmail.com> on Oct 1, 2016  5:36:26 PM
+Copyright www.imanbayli.net 2016.All rights reserved
+*/
+/* 
+    Created on : Oct 1, 2016, 5:36:26 PM
+    Author     : Murad R. Imanbayli <muradimanbayli at gmail.com>
+*/
+#upload-panel{
+    border-radius: 5px;
+    border:1px solid #DDD;
+    position: relative;
+    width: 400px;
+    height: 200px;
+    line-height: 150px;
+    color: #909090;
+    font-size: 26px;
+    font-family: "Tahoma";
+    text-align: center;
+    margin: 50px auto;
+}
+#upload-panel input[type='file']{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+}
+.upload-progress{
+    width: 600px;
+    margin: 50px auto;
+}
+
+.upload-progress .progress{
+    border: 1px solid #DDD;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px;
+    font-family: "Tahoma";
+    color: #909090;
+
+}
+
