@@ -1,0 +1,41 @@
+/*
+tagstyle.css
+Created by Murad R. Imanbayli <muradimanbayli at gmail.com> on Oct 11, 2016  2:47:00 PM
+Copyright www.imanbayli.net 2016.All rights reserved
+*/
+/* 
+    Created on : Oct 11, 2016, 2:47:00 PM
+    Author     : Murad R. Imanbayli <muradimanbayli at gmail.com>
+*/
+
+.tag-input{
+    border: 1px solid #DDD;
+    resize: none;
+    height: 100px;
+    width: 300px;
+    outline: none;
+    padding: 3px;
+    border-radius: 2px;
+    color: #b5b5b5;
+}
+.remove-tag{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.tag{
+    border: 1px solid #DDD;
+    color: #a2a2a2;
+    padding: 3px;
+    border-radius: 2px;
+    margin-right: 3px;
+    margin-top: 5px;
+    display: inline-block;
+}
+.tag-area{
+    width: 300px;
+    padding: 3px;
+}
