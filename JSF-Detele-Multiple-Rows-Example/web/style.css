@@ -1,0 +1,27 @@
+/*
+style.css
+Created by Murad R. Imanbayli <muradimanbayli at gmail.com> on Oct 23, 2016  12:58:29 AM
+Copyright www.imanbayli.net 2016.All rights reserved
+*/
+/* 
+    Created on : Oct 23, 2016, 12:58:29 AM
+    Author     : Murad R. Imanbayli <muradimanbayli at gmail.com>
+*/
+table{
+    border-collapse: collapse;
+    width: 1px;
+    width: 600px;
+}
+table thead th{
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}
+table tbody td{
+    border: 1px solid #DDD;
+    text-align: center;
+}
+tr.selected td{
+    background-color: #DDD;
+}

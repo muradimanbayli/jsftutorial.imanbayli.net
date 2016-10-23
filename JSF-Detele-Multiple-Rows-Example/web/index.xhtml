@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>JSF Delete Multiple Rows Example</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script>
+            function selectRow(checkBox) {
+                var row = checkBox.parentNode.parentNode;
+                if (row.className == "selected") {
+                    row.className = "";
+                } else {
+                    row.className = "selected";
+                }
+            }
+        </script>
+    </h:head>
+    <h:body>
+        <h:form>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>    
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ui:repeat value="#{userController.users}" var="u">
+                        <tr>
+                            <td><h:selectBooleanCheckbox value="#{u.selected}"/></td>
+                            <td>#{u.name}</td>
+                            <td>#{u.surname}</td>
+                            <td>#{u.age}</td>
+                        </tr>
+                    </ui:repeat>
+                </tbody>
+            </table>
+            <h:commandButton value="Delete" action="#{userController.delete()}">
+                <f:ajax render="@form" execute="@form"/>
+            </h:commandButton>
+        </h:form>
+    </h:body>
+</html>
+
