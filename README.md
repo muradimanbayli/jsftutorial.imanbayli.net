@@ -1,1 +1,2 @@
-# Java Server Faces Tutorials By Murad R. Imanbayli
+# Java Server Faces Tutorials.
+Created by Murad Imanbayli(www.imanbayli.net)
